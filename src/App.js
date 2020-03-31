@@ -8,9 +8,9 @@ function App() {
     <div className="App">
       <div id="drum-machine">
         {drumkit.map((val, index) => <DrumPad 
+        name={drumkit[index].name}
         binding={drumkit[index].binding}
         source={drumkit[index].source}
-        index={index}
         />)}
       </div>
     </div>
