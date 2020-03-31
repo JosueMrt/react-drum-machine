@@ -1,16 +1,15 @@
 import React from 'react';
 
-function DrumPad() {
-    function playSound() {
-            const sound = document.getElementById('q');
-            console.log(sound);
-            sound.currentTime = 0;
-            sound.play();
+function DrumPad({ index, binding, source }) {
+    const playSound = () => {
+        const sound = document.getElementById(binding);
+        sound.currentTime = 0;
+        sound.play();
     }
     return (
-        <div>
-            <audio id="q" className="clip" src="https://s3.amazonaws.com/freecodecamp/drums/punchy_kick_1.mp3"></audio>
-            <button onClick={playSound}>Q</button>
+        <div className="drum-pad">
+            <audio id={binding} className="clip" src={source}></audio>
+            <button onClick={playSound}>{binding.toUpperCase()}</button>
         </div>
     );
 }
