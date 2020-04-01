@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 
 function DrumPad({ name, binding, source, setDisplay }) {
     const playSound = () => {
@@ -8,13 +8,13 @@ function DrumPad({ name, binding, source, setDisplay }) {
         sound.play();
     }
     const handleKeyDown = (e) => {
-        if(e.key.toUpperCase() == binding) playSound();
+        if(e.key.toUpperCase() === binding) playSound();
     }
-    React.useEffect(() => document.addEventListener('keydown', handleKeyDown));
+    useEffect(() => document.addEventListener('keydown', handleKeyDown));
     return (
         <div className="drum-pad" id={name}>      
             <button onClick={playSound}>
-                <audio id={binding} className="clip" src={source}></audio>
+                <audio preload='auto' id={binding} className="clip" src={source}></audio>
                 {binding}
             </button>
         </div>
