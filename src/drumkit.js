@@ -44,8 +44,6 @@ const drumkit = [
         binding: 'C',
         source: 'https://dl.dropbox.com/s/53cxfkhqswitqu6/sample2.mp3?dl=0'
     },
-
-
 ]
 
 export default drumkit
