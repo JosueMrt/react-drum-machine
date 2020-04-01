@@ -7,9 +7,11 @@ function DrumPad({ name, binding, source }) {
         sound.play();
     }
     return (
-        <div className="drum-pad" id={name}>
-            <audio id={binding} className="clip" src={source}></audio>
-            <button onClick={playSound}>{binding}</button>
+        <div className="drum-pad" id={name}>      
+            <button onClick={playSound}>
+                <audio id={binding} className="clip" src={source}></audio>
+                {binding}
+            </button>
         </div>
     );
 }
