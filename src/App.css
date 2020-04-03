@@ -46,3 +46,9 @@
   padding: 0 10px 0 10px;
   border-radius: 10px;
 }
+
+#switch-text {
+  font-family: 'Nunito Sans', sans-serif;
+  margin: 0 0 5px 0;
+  color: #aaa;
+}

@@ -1,3 +1,4 @@
+## Live demo: [here](https://josuemrt.github.io/react-drum-machine/)
 Simple Drum Machine made with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

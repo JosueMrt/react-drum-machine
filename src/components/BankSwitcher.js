@@ -10,6 +10,7 @@ const BankSwitcher = ({ loadedBank, setLoadedBank }) => {
     }
     return (
         <div>
+            <p id="switch-text">Bank Switch</p>
             <label>
                 <Toggle
                     id="toggle"
