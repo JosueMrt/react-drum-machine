@@ -1,10 +1,10 @@
 import React, {useEffect} from 'react';
 
-function DrumPad({ name, binding, source, setDisplay }) {
+function DrumPad({ name, binding, source, setDisplay2 }) {
     const playSound = () => {
+        setDisplay2(name);
         const sound = document.getElementById(binding);
         sound.currentTime = 0;
-        setDisplay(name);
         sound.play();
     }
     const handleKeyDown = (e) => {
@@ -12,12 +12,10 @@ function DrumPad({ name, binding, source, setDisplay }) {
     }
     useEffect(() => document.addEventListener('keydown', handleKeyDown));
     return (
-        <div className="drum-pad" id={name}>      
-            <button onClick={playSound}>
-                <audio preload='auto' id={binding} className="clip" src={source}></audio>
-                {binding}
-            </button>
-        </div>
+        <button className="drum-pad" id={name} onClick={playSound}>      
+            <audio preload='auto' id={binding} className="clip" src={source}></audio>
+            {binding}
+        </button>
     );
 }
  

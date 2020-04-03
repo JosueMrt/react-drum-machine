@@ -2,40 +2,47 @@
   min-height: 100vh;
   margin: 0;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-}
-
-h1 {
-  background-color: blue;
+  background: #aaa;
 }
 
 #drum-machine {
-  display: flex;
-  align-items: center;
-  height: 500px;
-  width: 800px;
-  background-color: grey;
+  background-color: #3f3f3f;
+  border-radius: 10px;
+  padding: 20px;
 }
 
 #drum-pad-container {
-  height: fit-content;
-  width: 50%;
-  margin-left: 1rem;
   grid-gap: 10px;
   display: grid;
   grid-template-rows: 1fr 1fr 1fr;
   grid-template-columns: 1fr 1fr 1fr;
 }
 
-.drum-pad button {
+.drum-pad {
   height: 100px;
   width: 120px;
+  background-color: #202020;
+  color: #aaa;
+  border: 1px solid #000;
+  border-radius: 7px;
 }
 
 #display-container {
   height: fit-content;
-  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+#display {
+  font-family: 'Nunito Sans', sans-serif;
+  background-color: #202020;
+  width: 100%;
+  color: #35cac5;
   text-align: center;
+  font-size: 1.8em;
+  margin-bottom: 20px;
+  padding: 0 10px 0 10px;
+  border-radius: 10px;
 }

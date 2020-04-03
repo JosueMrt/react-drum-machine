@@ -3,7 +3,7 @@ import React from 'react';
 const Display = ({ display }) => {
     return (
         <div id="display">
-            {display}
+            <p>{display.toUpperCase()}</p>
         </div>
     );
 }

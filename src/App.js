@@ -5,22 +5,21 @@ import Display from './components/Display'
 import drumkit from './drumkit.js';
 
 function App() {
-  const [display, setDisplay] = useState('');
+  const [display, setDisplay] = useState('react drum machine');
   return (
     <div className="App">
-      <h1>React Drum Machine</h1>
       <div id="drum-machine">
+        <div id="display-container">
+          <Display display={display} />
+        </div>  
         <div id="drum-pad-container">
           {drumkit.map((val, index) => <DrumPad 
           key={index}
           name={val.name}
           binding={val.binding}
           source={val.source}
-          setDisplay={setDisplay}
+          setDisplay2={setDisplay}
           />)}
-        </div>
-        <div id="display-container">
-          <Display display={display} />
         </div>
       </div>
     </div>
