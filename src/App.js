@@ -7,17 +7,19 @@ import drumkit from './drumkit.js';
 
 function App() {
   const [display, setDisplay] = useState('react drum machine');
-  const [bank, setBank] = useState(false);
+  const [loadedBank, setLoadedBank] = useState(drumkit);
   return (
     <div className="App">
       <div id="drum-machine">
         <div id="display-container">
           <Display display={display} />
         </div>  
-        <BankSwitcher />
+        <BankSwitcher 
+          loadedBank = {loadedBank}
+          setLoadedBank={setLoadedBank}
+        />
         <div id="drum-pad-container">
-          {drumkit.map((val, index) => <DrumPad 
-          bank={bank}
+          {loadedBank.map((val, index) => <DrumPad 
           key={index}
           name={val.name}
           binding={val.binding}
